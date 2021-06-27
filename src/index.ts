@@ -86,7 +86,7 @@ class Schema {
   validate(source: Values, callback: ValidateCallback): Promise<void>;
   validate(source: Values): Promise<void>;
 
-  validate(source_: Values, o: any = {}, oc: any = () => {}): Promise<void> {
+  validate(source_: Values, o: any = {}, oc: any = () => {}): Promise<Values | void> {
     let source: Values = source_;
     let options: ValidateOption = o;
     let callback: ValidateCallback = oc;
@@ -299,7 +299,7 @@ class Schema {
       results => {
         complete(results);
       },
-    );
+    ).then(() => source);
   }
 
   getType(rule: InternalRuleItem) {

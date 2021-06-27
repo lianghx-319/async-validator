@@ -1,5 +1,5 @@
 {
-  "name": "async-validator",
+  "name": "@hanxx/async-validator",
   "version": "3.5.2",
   "description": "validate form asynchronous",
   "typings": "typings/index.d.ts",

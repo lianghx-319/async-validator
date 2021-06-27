@@ -76,11 +76,13 @@ describe('number', () => {
     new Schema({
       v: {
         type: 'number',
-        transform: Number,
+        transform: (value) => 2,
       },
     }).validate(value, errors => {
       expect(value.v).toBe('1');
       expect(errors).toBeFalsy();
+    }).then(_value => {
+      expect(_value.v).toBe(2);
       done();
     });
   });
