@@ -52,7 +52,7 @@ export interface RuleItem {
   fields?: Record<string, RuleItem>; // ignore when without required
   options?: ValidateOption;
   defaultField?: RuleItem; // 'object' or 'array' containing validation rules
-  transform?: (value: Value) => Value;
+  transform?: (value: Value, source: Values) => Value;
   message?: string;
   asyncValidator?: (
     rule: InternalRuleItem,

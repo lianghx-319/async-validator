@@ -149,7 +149,7 @@ class Schema {
           if (source === source_) {
             source = { ...source };
           }
-          value = source[z] = rule.transform(value);
+          value = source[z] = rule.transform(value, { ...source });
         }
         if (typeof rule === 'function') {
           rule = {

@@ -1,6 +1,6 @@
 {
-  "name": "async-validator",
-  "version": "3.5.2",
+  "name": "@hanxx/async-validator",
+  "version": "3.6.1",
   "description": "validate form asynchronous",
   "typings": "typings/index.d.ts",
   "keywords": [
@@ -8,11 +8,11 @@
     "validate",
     "async"
   ],
-  "homepage": "https://github.com/yiminghe/async-validator",
-  "author": "yiminghe@gmail.com",
+  "homepage": "https://github.com/lianghx-319/async-validator",
+  "author": "xsytby1112@gmail.com",
   "repository": {
     "type": "git",
-    "url": "git@github.com:yiminghe/async-validator.git"
+    "url": "git@github.com:lianghx-319/async-validator.git"
   },
   "@pika/pack": {
     "pipeline": [
@@ -56,7 +56,7 @@
   "scripts": {
     "lint-staged": "lint-staged",
     "prettier": "prettier --write \"{src,__tests__}/**/*.{js,tsx}\"",
-    "pub": "np --no-publish --no-release-draft && npm run build && npm publish pkg",
+    "pub": "np --no-publish --no-release-draft --any-branch && npm run build && npm publish pkg",
     "build": "pika-pack build",
     "test": "jest",
     "test:watch": "jest --watch",
